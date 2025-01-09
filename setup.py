@@ -1,9 +1,13 @@
 from setuptools import setup, find_packages
+from os import path
+
+here = path.abspath(path.dirname(__file__))
 
 setup(
     name="llm-auto-eda",
-    version="0.0.1",
-    packages=find_packages(),
+    version="0.0.3",  # Versiyon güncellendi
+    packages=find_packages("."),
+    package_dir={"": "."},
     install_requires=[
         'pandas',
         'numpy',
